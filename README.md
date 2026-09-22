@@ -1,0 +1,1 @@
+# westcore_equipment_web

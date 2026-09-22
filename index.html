@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westcore Equipment — Vacuum Negative Pressure Boiler Solutions</title>
+    <meta name="description" content="Westcore Equipment provides vacuum negative pressure boiler systems for food, beverage, laundry, central kitchens and industrial manufacturing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #0d1b3e;
+            --blue: #1a3a8f;
+            --bright-blue: #1e56c8;
+            --accent: #e8a020;
+            --light: #f4f7fc;
+            --mid: #dde4f0;
+            --white: #ffffff;
+            --text: #1a2035;
+            --muted: #5a6685;
+            --font-head: 'Barlow Condensed', sans-serif;
+            --font-body: 'Barlow', sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        /* NAV */
+        header {
+            position: sticky; top: 0; z-index: 200;
+            background: var(--navy);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%;
+            height: 68px;
+            border-bottom: 3px solid var(--accent);
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-wrap img { height: 40px; width: auto; }
+        .logo-text { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--white); letter-spacing: 0.04em; text-transform: uppercase; }
+        .logo-text span { color: var(--accent); }
+        nav { display: flex; align-items: center; gap: 0; }
+        nav a {
+            color: rgba(255,255,255,0.78); text-decoration: none;
+            font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+            padding: 0 1.1rem; height: 68px; display: flex; align-items: center;
+            border-bottom: 3px solid transparent; margin-bottom: -3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav a:hover { color: var(--white); border-color: var(--accent); }
+        nav .nav-cta {
+            margin-left: 0.5rem; background: var(--accent); color: var(--navy);
+            border-radius: 4px; height: auto; padding: 0.5rem 1.1rem;
+            border-bottom: none; margin-bottom: 0; font-weight: 700;
+        }
+        nav .nav-cta:hover { background: #f5b233; border-color: transparent; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0e2560 55%, var(--blue) 100%);
+            padding: 6rem 5% 5rem;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(232,160,32,0.15); border: 1px solid rgba(232,160,32,0.4);
+            color: var(--accent); font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            padding: 0.4rem 1rem; border-radius: 3px; margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-family: var(--font-head); font-size: 3.8rem; font-weight: 800;
+            color: var(--white); line-height: 1.05; letter-spacing: 0.01em;
+            text-transform: uppercase; margin-bottom: 1.5rem;
+        }
+        .hero h1 span { color: var(--accent); display: block; }
+        .hero-desc { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+        .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 0.75rem 1.6rem; border-radius: 4px;
+            font-family: var(--font-body); font-size: 0.875rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer;
+            text-decoration: none; transition: all 0.2s; border: 2px solid transparent;
+        }
+        .btn-primary { background: var(--accent); color: var(--navy); }
+        .btn-primary:hover { background: #f5b233; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,160,32,0.35); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); transform: translateY(-2px); }
+        .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+        .hero-stat { background: rgba(255,255,255,0.06); padding: 1.5rem 1rem; text-align: center; }
+        .hero-stat strong { display: block; font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
+        .hero-stat span { font-size: 0.78rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; display: block; }
+
+        /* STRIP */
+        .strip { background: var(--accent); padding: 1rem 5%; }
+        .strip-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 3rem; overflow-x: auto; }
+        .strip-item { display: flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--navy); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; flex-shrink: 0; }
+        .strip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--navy); opacity: 0.4; flex-shrink: 0; }
+
+        /* SECTION COMMONS */
+        section { padding: 5rem 5%; }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+        .section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--bright-blue); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .section-title { font-family: var(--font-head); font-size: 2.6rem; font-weight: 800; color: var(--navy); line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 0.75rem; }
+        .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; }
+        .section-head { margin-bottom: 3rem; }
+        .section-head.center { text-align: center; }
+        .section-head.center .section-sub { margin: 0 auto; }
+
+        /* WHY VACUUM */
+        .why { background: var(--light); }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+        .why-card {
+            background: var(--white); border-radius: 8px;
+            border: 1px solid var(--mid); padding: 2rem 1.5rem;
+            display: flex; flex-direction: column; gap: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,27,62,0.1); border-color: var(--bright-blue); }
+        .why-num {
+            width: 44px; height: 44px; border-radius: 6px;
+            background: var(--navy); color: var(--accent);
+            font-family: var(--font-head); font-size: 1.3rem; font-weight: 800;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .why-card h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.03em; }
+        .why-card ul { list-style: none; color: var(--muted); font-size: 0.875rem; line-height: 1.8; flex: 1; }
+        .why-card ul li { padding-left: 1rem; position: relative; }
+        .why-card ul li::before { content: '→'; color: var(--bright-blue); position: absolute; left: 0; font-size: 0.8rem; line-height: 1.8; }
+        .why-highlight { font-size: 0.8rem; font-weight: 700; color: var(--bright-blue); background: #e8f0fe; padding: 0.45rem 0.75rem; border-radius: 4px; border-left: 3px solid var(--bright-blue); }
+
+        /* PRODUCTS */
+        .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .product-card {
+            border-radius: 8px; overflow: hidden;
+            border: 1px solid var(--mid);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,27,62,0.12); }
+        .product-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+        .product-card-body { padding: 1.75rem; background: var(--white); }
+        .product-tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); background: #fff5e0; padding: 0.25rem 0.6rem; border-radius: 3px; display: inline-block; margin-bottom: 0.75rem; }
+        .product-card h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--navy); text-transform: uppercase; margin-bottom: 0.6rem; }
+        .product-card p { color: var(--muted); font-size: 0.875rem; line-height: 1.75; }
+
+        /* INDUSTRIES */
+        .industries { background: var(--navy); }
+        .industries .section-title { color: var(--white); }
+        .industries .section-sub { color: rgba(255,255,255,0.6); }
+        .industries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .industry-card {
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px; padding: 2rem 1.5rem;
+            text-decoration: none; transition: background 0.2s, border-color 0.2s, transform 0.2s;
+            display: flex; flex-direction: column; gap: 1rem;
+        }
+        .industry-card:hover { background: rgba(255,255,255,0.1); border-color: var(--accent); transform: translateY(-3px); }
+        .ind-icon { font-size: 2rem; }
+        .industry-card h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--white); text-transform: uppercase; }
+        .industry-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+        .industry-card .ind-roi { font-size: 0.78rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-top: auto; }
+        .ind-link { color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; gap: 4px; }
+
+        /* SERVICES */
+        .services { background: var(--light); }
+        .services-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+        .service-card {
+            background: var(--white); border: 1px solid var(--mid);
+            border-radius: 8px; padding: 1.5rem 1.25rem;
+            text-align: center; transition: border-color 0.2s, transform 0.2s;
+        }
+        .service-card:hover { border-color: var(--bright-blue); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13,27,62,0.08); }
+        .svc-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .service-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--navy); text-transform: uppercase; }
+
+        /* ABOUT */
+        .about-band {
+            background: linear-gradient(135deg, #0d1b3e, #1a3a8f);
+            padding: 5rem 5%;
+        }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-inner .section-title { color: var(--white); }
+        .about-inner .section-sub { color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 100%; line-height: 1.85; }
+        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+        .astat { background: rgba(255,255,255,0.07); padding: 1.75rem; }
+        .astat strong { display: block; font-family: var(--font-head); font-size: 2.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
+        .astat span { font-size: 0.8rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; display: block; }
+        .certs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .cert-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); font-size: 0.78rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 3px; }
+
+        /* CTA */
+        .cta-section { background: var(--accent); padding: 4rem 5%; text-align: center; }
+        .cta-section h2 { font-family: var(--font-head); font-size: 2.8rem; font-weight: 800; color: var(--navy); text-transform: uppercase; margin-bottom: 0.5rem; }
+        .cta-section p { color: rgba(13,27,62,0.7); font-size: 1rem; margin-bottom: 2rem; }
+        .cta-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+        .btn-dark { background: var(--navy); color: var(--white); border-color: var(--navy); }
+        .btn-dark:hover { background: #0a1530; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,27,62,0.3); }
+        .btn-ghost { background: transparent; color: var(--navy); border-color: var(--navy); }
+        .btn-ghost:hover { background: rgba(13,27,62,0.08); transform: translateY(-2px); }
+
+        /* CONTACT */
+        .contact-section { padding: 5rem 5%; background: var(--white); }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; }
+        .contact-info h2 { font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--navy); text-transform: uppercase; margin-bottom: 1rem; }
+        .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+        .contact-detail { display: flex; flex-direction: column; gap: 0.75rem; }
+        .contact-row { display: flex; gap: 12px; align-items: flex-start; }
+        .contact-row .icon { font-size: 1.1rem; margin-top: 2px; }
+        .contact-row span { font-size: 0.9rem; color: var(--text); }
+        .contact-row strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .form-field { display: flex; flex-direction: column; gap: 4px; }
+        .form-field label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+        .form-field input, .form-field select, .form-field textarea {
+            padding: 0.75rem 1rem; border: 1.5px solid var(--mid);
+            border-radius: 4px; font-family: var(--font-body); font-size: 0.9rem; color: var(--text);
+            transition: border-color 0.2s; background: var(--white);
+        }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--bright-blue); }
+        .form-field.full { grid-column: span 2; }
+        .form-actions { grid-column: span 2; display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem; }
+        #contact-result { color: #1a6e2e; font-size: 0.9rem; font-weight: 600; text-align: center; margin-top: 0.75rem; }
+
+        /* FOOTER */
+        footer { background: #07101f; padding: 2rem 5%; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-logo-wrap { display: flex; align-items: center; gap: 10px; }
+        .footer-logo-wrap img { height: 32px; }
+        .footer-logo-text { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; }
+        .footer-logo-text span { color: var(--accent); }
+        footer p { color: #4a5578; font-size: 0.8rem; }
+        .footer-links { display: flex; gap: 1.5rem; }
+        .footer-links a { color: #4a5578; font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--accent); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 860px) {
+            nav { display: none; }
+            nav.open { display: flex; flex-direction: column; align-items: flex-start; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1rem 5%; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.open a { height: auto; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; }
+            nav.open .nav-cta { margin: 0.5rem 0 0; }
+            .hamburger { display: block; }
+            .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero h1 { font-size: 2.6rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+        @media (max-width: 580px) {
+            .hero h1 { font-size: 2rem; }
+            .why-grid { grid-template-columns: 1fr; }
+            .industries-grid { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: 1fr 1fr 1fr; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .strip-inner { gap: 1.5rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-field.full, .form-actions { grid-column: span 1; }
+            .about-stats { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81EXF99189"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81EXF99189');
+    </script>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-wrap">
+        <img src="logo.jpg" alt="Westcore Equipment">
+        <span class="logo-text">West<span>core</span> Equipment</span>
+    </a>
+    <nav id="main-nav">
+        <a href="about.html">About</a>
+        <a href="#products">Products</a>
+        <a href="#why-vacuum">Why Vacuum</a>
+        <a href="#industries">Industries</a>
+        <a href="articles/index.html">Articles</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Request a Quote</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding-bottom:0;">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-badge">⚙ Industrial Boiler Solutions</div>
+            <h1>Vacuum Negative <span>Pressure Boilers</span></h1>
+            <p class="hero-desc">Reduce costs, cut emissions and improve factory efficiency with Westcore's advanced vacuum boiler systems — engineered for energy savings, regulatory compliance, and long-term reliable operation.</p>
+            <div class="hero-actions">
+                <a href="#why-vacuum" class="btn btn-primary">See the Benefits</a>
+                <a href="#contact" class="btn btn-outline">Request a Quote</a>
+                <a href="assets/product-brochure.pdf" class="btn btn-outline" download>⬇ Download Brochure</a>
+            </div>
+        </div>
+        <div>
+            <div class="hero-stats">
+                <div class="hero-stat"><strong>450+</strong><span>Installed Projects</span></div>
+                <div class="hero-stat"><strong>18</strong><span>Countries Served</span></div>
+                <div class="hero-stat"><strong>13+</strong><span>Years of Expertise</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+    <div class="strip-inner">
+        <div class="strip-item">✔ ISO 9001 Certified</div>
+        <div class="strip-dot"></div>
+        <div class="strip-item">✔ ISO 14001 Environmental</div>
+        <div class="strip-dot"></div>
+        <div class="strip-item">✔ Up to 35% Energy Savings</div>
+        <div class="strip-dot"></div>
+        <div class="strip-item">✔ Sales · Leasing · Maintenance</div>
+        <div class="strip-dot"></div>
+        <div class="strip-item">✔ US Market Ready</div>
+    </div>
+</div>
+
+<!-- WHY VACUUM -->
+<section class="why" id="why-vacuum">
+    <div class="section-inner">
+        <div class="section-head center">
+            <span class="section-label">Key Advantages</span>
+            <h2 class="section-title">Why Factories Choose Vacuum Boilers</h2>
+            <p class="section-sub">Four concrete reasons industrial operators are making the switch to vacuum negative pressure technology.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-num">01</div>
+                <h3>Save Energy &amp; Cut Costs</h3>
+                <ul>
+                    <li>High thermal efficiency cuts gas consumption</li>
+                    <li>Long-term operation lowers energy bills significantly</li>
+                    <li>Reduces overall factory operating costs</li>
+                </ul>
+                <div class="why-highlight">Real cash savings every month</div>
+            </div>
+            <div class="why-card">
+                <div class="why-num">02</div>
+                <h3>Environmentally Friendly</h3>
+                <ul>
+                    <li>Lower emissions meeting environmental standards</li>
+                    <li>Reduces inspections and regulatory pressure</li>
+                    <li>Supports long-term compliance for your business</li>
+                </ul>
+                <div class="why-highlight">Aligned with US environmental regulations</div>
+            </div>
+            <div class="why-card">
+                <div class="why-num">03</div>
+                <h3>Reduce Labor Costs</h3>
+                <ul>
+                    <li>High degree of intelligent automation</li>
+                    <li>Simpler, more intuitive operation</li>
+                    <li>Fewer dedicated operators and maintenance staff</li>
+                </ul>
+                <div class="why-highlight">Lower wages + reduced management overhead</div>
+            </div>
+            <div class="why-card">
+                <div class="why-num">04</div>
+                <h3>Save Factory Space</h3>
+                <ul>
+                    <li>Compact, space-efficient design</li>
+                    <li>Smaller footprint than traditional boilers</li>
+                    <li>Frees up valuable production floor space</li>
+                </ul>
+                <div class="why-highlight">More floor space = lower effective rent cost</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <div class="section-inner">
+        <div class="section-head center">
+            <span class="section-label">Our Products</span>
+            <h2 class="section-title">Product Line</h2>
+            <p class="section-sub">Purpose-built systems for every scale of operation — from compact installations to large industrial facilities.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Thermal Energy Systems">
+                <div class="product-card-body">
+                    <span class="product-tag">Gas / Combustion</span>
+                    <h3>Thermal Energy Systems</h3>
+                    <p>High-efficiency water-cooled heating solutions with advanced combustion technology. Ultra-low emissions, rapid response times, and exceptional thermal efficiency for industrial and commercial heating applications.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Electric Equipment">
+                <div class="product-card-body">
+                    <span class="product-tag">Electric</span>
+                    <h3>Electric Equipment</h3>
+                    <p>Next-generation electric boilers and heating systems with modular design. Scalable power ratings from 1.4 to 60MW, available in multiple voltage configurations for flexible deployment.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="product3.jpg" alt="Specialized Generators">
+                <div class="product-card-body">
+                    <span class="product-tag">Steam / Heat Pipe</span>
+                    <h3>Specialized Generators</h3>
+                    <p>Compact steam and heating generators with innovative heat pipe technology. Space-efficient design with minimal footprint, perfect for applications where installation space is limited.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+    <div class="section-inner">
+        <div class="section-head">
+            <span class="section-label" style="color:rgba(255,255,255,0.55);">Who We Serve</span>
+            <h2 class="section-title">Industries We Serve</h2>
+            <p class="section-sub" style="color:rgba(255,255,255,0.55);">Specialized solutions built around the specific demands of each sector.</p>
+        </div>
+        <div class="industries-grid">
+            <a href="food-processing.html" class="industry-card">
+                <div class="ind-icon">🍱</div>
+                <h3>Food Processing</h3>
+                <p>Strict hygiene requirements, high energy demands, and food-grade steam quality — our systems deliver consistent performance.</p>
+                <span class="ind-roi">ROI: 18–36 months · Up to 35% energy savings</span>
+                <span class="ind-link">Learn More →</span>
+            </a>
+            <a href="beverage-manufacturing.html" class="industry-card">
+                <div class="ind-icon">🧃</div>
+                <h3>Beverage Manufacturing</h3>
+                <p>Precise temperature control for pasteurization with high uptime and consistent steam quality for continuous operations.</p>
+                <span class="ind-roi">ROI: 12–30 months · 22% avg energy cost reduction</span>
+                <span class="ind-link">Learn More →</span>
+            </a>
+            <a href="commercial-laundry.html" class="industry-card">
+                <div class="ind-icon">🏨</div>
+                <h3>Commercial Laundry</h3>
+                <p>High-demand peak cycles met with rapid start-up, quick recovery and reduced utility bills for hotel and industrial laundries.</p>
+                <span class="ind-roi">ROI: 12–24 months · 30% gas reduction</span>
+                <span class="ind-link">Learn More →</span>
+            </a>
+            <a href="central-kitchen.html" class="industry-card">
+                <div class="ind-icon">👨‍🍳</div>
+                <h3>Central Kitchen</h3>
+                <p>Large fluctuating steam loads handled with rapid response, clean steam and efficient operation for high-volume food prep.</p>
+                <span class="ind-roi">ROI: 15–30 months · 24% energy usage reduction</span>
+                <span class="ind-link">Learn More →</span>
+            </a>
+            <a href="industrial-manufacturing.html" class="industry-card">
+                <div class="ind-icon">🏭</div>
+                <h3>Industrial Manufacturing</h3>
+                <p>Scalable packages for large-scale steam demands with long service intervals and high thermal efficiencies.</p>
+                <span class="ind-roi">ROI: 18–40 months · 30% fuel consumption cut</span>
+                <span class="ind-link">Learn More →</span>
+            </a>
+            <div class="industry-card" style="background:rgba(232,160,32,0.1);border-color:rgba(232,160,32,0.3);cursor:default;">
+                <div class="ind-icon">🏥</div>
+                <h3>Hotels &amp; Hospitals</h3>
+                <p>Reliable, around-the-clock steam supply with minimal maintenance for hospitality and healthcare facilities.</p>
+                <span class="ind-roi">Consistent performance · 24/7 uptime</span>
+                <span class="ind-link" style="color:rgba(255,255,255,0.4);">Contact Us for Details</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <div class="section-inner">
+        <div class="section-head center">
+            <span class="section-label">Our Offerings</span>
+            <h2 class="section-title">What We Provide</h2>
+            <p class="section-sub">End-to-end support from initial consultation through long-term maintenance and optimization.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><div class="svc-icon">🛒</div><h3>Boiler Sales</h3></div>
+            <div class="service-card"><div class="svc-icon">📋</div><h3>Boiler Leasing</h3></div>
+            <div class="service-card"><div class="svc-icon">🔧</div><h3>Installation &amp; Commissioning</h3></div>
+            <div class="service-card"><div class="svc-icon">🛠</div><h3>After-Sales Maintenance</h3></div>
+            <div class="service-card"><div class="svc-icon">⚡</div><h3>Energy-Saving Upgrades</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-band" id="about">
+    <div class="about-inner">
+        <div>
+            <span class="section-label" style="color:rgba(255,255,255,0.5);">About Westcore Equipment</span>
+            <h2 class="section-title" style="color:var(--white);">Engineering Excellence Since 2012</h2>
+            <p class="section-sub" style="color:rgba(255,255,255,0.65);max-width:100%;margin-bottom:1.5rem;">Westcore Equipment specializes in vacuum negative pressure boiler solutions that help factories lower costs and run more efficiently. Manufacturing is based in Huzhou, Zhejiang, China, with our sales headquarters in Los Angeles, California — we combine in-house manufacturing, engineering services, and project delivery to support industrial customers in energy-intensive sectors across 18 countries.</p>
+            <p class="section-sub" style="color:rgba(255,255,255,0.65);max-width:100%;">Our portfolio of thermal energy systems, electric equipment, and specialized generators is engineered to the highest standards of efficiency, reliability, and environmental responsibility — meeting the demanding requirements of modern industrial operations in the United States and globally.</p>
+            <div class="certs">
+                <span class="cert-badge">ISO 9001</span>
+                <span class="cert-badge">ISO 14001</span>
+                <span class="cert-badge">Industrial Safety Compliance</span>
+                <span class="cert-badge">US Market Ready</span>
+            </div>
+        </div>
+        <div>
+            <div class="about-stats">
+                <div class="astat"><strong>450+</strong><span>Installed Projects</span></div>
+                <div class="astat"><strong>18</strong><span>Countries Served</span></div>
+                <div class="astat"><strong>200+</strong><span>Systems Per Year</span></div>
+                <div class="astat"><strong>2012</strong><span>Year Established</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="cta-section">
+    <h2>Ready to Cut Energy Costs?</h2>
+    <p>Request a quote, schedule a consultation, or speak directly with one of our engineers.</p>
+    <div class="cta-actions">
+        <a href="#contact" class="btn btn-dark">Request a Quote</a>
+        <a href="#contact" class="btn btn-ghost">Schedule Consultation</a>
+        <a href="assets/product-brochure.pdf" class="btn btn-ghost" download>⬇ Download Brochure</a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+    <div class="contact-inner">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Fill out the form and our regional sales engineer will contact you within 1 business day.</p>
+            <div class="contact-detail">
+                <div class="contact-row">
+                    <span class="icon">📧</span>
+                    <div><strong>Email</strong><span>info@westcoreequipment.com</span></div>
+                </div>
+                <div class="contact-row">
+                    <span class="icon">📍</span>
+                    <div><strong>Sales Office</strong><span>Los Angeles, California</span></div>
+                </div>
+                <div class="contact-row">
+                    <span class="icon">🏭</span>
+                    <div><strong>Manufacturing</strong><span>Huzhou, Zhejiang, China</span></div>
+                </div>
+                <div class="contact-row">
+                    <span class="icon">🌐</span>
+                    <div><strong>Markets Served</strong><span>18 countries including United States</span></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form id="contact-form" class="form-grid">
+                <div class="form-field">
+                    <label>First Name *</label>
+                    <input name="firstName" placeholder="John" required>
+                </div>
+                <div class="form-field">
+                    <label>Last Name</label>
+                    <input name="lastName" placeholder="Smith">
+                </div>
+                <div class="form-field">
+                    <label>Company *</label>
+                    <input name="company" placeholder="Your Company" required>
+                </div>
+                <div class="form-field">
+                    <label>Email *</label>
+                    <input name="email" type="email" placeholder="you@company.com" required>
+                </div>
+                <div class="form-field">
+                    <label>Phone</label>
+                    <input name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-field">
+                    <label>Industry *</label>
+                    <select name="industry" required>
+                        <option value="">Select industry</option>
+                        <option value="food">Food Processing</option>
+                        <option value="beverage">Beverage Manufacturing</option>
+                        <option value="laundry">Commercial Laundry</option>
+                        <option value="central_kitchen">Central Kitchen</option>
+                        <option value="industrial">Industrial Manufacturing</option>
+                        <option value="hotel">Hotel / Hospitality</option>
+                        <option value="hospital">Hospital / Healthcare</option>
+                    </select>
+                </div>
+                <div class="form-field full">
+                    <label>Project Details / Comments</label>
+                    <textarea name="message" placeholder="Tell us about your current setup, steam requirements, or questions..." style="min-height:120px;resize:vertical;"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Send Request</button>
+                    <button type="button" id="download-brochure" class="btn" style="background:var(--light);color:var(--navy);border:2px solid var(--mid);">⬇ Download Brochure</button>
+                </div>
+            </form>
+            <div id="contact-result"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo-wrap">
+            <img src="logo.jpg" alt="Westcore Equipment">
+            <span class="footer-logo-text">West<span>core</span> Equipment</span>
+        </div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="#products">Products</a>
+            <a href="#industries">Industries</a>
+            <a href="articles/index.html">Articles</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2026 Westcore Equipment. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', function(){
+    document.getElementById('main-nav').classList.toggle('open');
+});
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

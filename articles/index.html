@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles — Westcore Equipment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        :root { --navy:#0d1b3e; --blue:#1a3a8f; --accent:#e8a020; --light:#f4f7fc; --mid:#dde4f0; --white:#ffffff; --text:#1a2035; --muted:#5a6685; --font-head:'Barlow Condensed',sans-serif; --font-body:'Barlow',sans-serif; }
+        body { font-family:var(--font-body); color:var(--text); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased; }
+        header { background:var(--navy); display:flex; align-items:center; justify-content:space-between; padding:0 5%; height:68px; border-bottom:3px solid var(--accent); }
+        .logo-wrap { display:flex; align-items:center; gap:12px; text-decoration:none; }
+        .logo-wrap img { height:40px; }
+        .logo-text { font-family:var(--font-head); font-size:1.4rem; font-weight:800; color:var(--white); letter-spacing:0.04em; text-transform:uppercase; }
+        .logo-text span { color:var(--accent); }
+        .page-hero { background:linear-gradient(135deg,var(--navy),#1a3a8f); padding:4rem 5%; }
+        .page-hero-inner { max-width:1100px; margin:0 auto; }
+        .breadcrumb { font-size:0.78rem; color:rgba(255,255,255,0.5); margin-bottom:1rem; }
+        .breadcrumb a { color:rgba(255,255,255,0.5); text-decoration:none; }
+        .page-hero h1 { font-family:var(--font-head); font-size:3rem; font-weight:800; color:var(--white); text-transform:uppercase; }
+        main { max-width:1100px; margin:0 auto; padding:4rem 5%; }
+        .articles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+        .article-card { border:1px solid var(--mid); border-radius:8px; padding:2rem; background:var(--white); transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s; text-decoration:none; display:block; }
+        .article-card:hover { transform:translateY(-3px); box-shadow:0 10px 32px rgba(13,27,62,0.1); border-color:#1e56c8; }
+        .article-tag { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); background:#fff5e0; padding:0.25rem 0.6rem; border-radius:3px; display:inline-block; margin-bottom:0.75rem; }
+        .article-card h2 { font-family:var(--font-head); font-size:1.2rem; font-weight:700; color:var(--navy); text-transform:uppercase; margin-bottom:0.5rem; }
+        .article-card p { color:var(--muted); font-size:0.875rem; line-height:1.75; }
+        .coming-soon { opacity:0.5; pointer-events:none; }
+        .soon-label { display:inline-block; font-size:0.7rem; color:var(--muted); background:var(--light); border:1px solid var(--mid); padding:0.2rem 0.5rem; border-radius:3px; margin-top:0.75rem; font-weight:600; }
+        footer { background:#07101f; padding:2rem 5%; text-align:center; margin-top:4rem; }
+        footer p { color:#4a5578; font-size:0.8rem; }
+        @media(max-width:760px) { .articles-grid{grid-template-columns:1fr;}
+        }
+            nav { display: flex; align-items: center; gap: 0; }
+        nav a {
+            color: rgba(255,255,255,0.78); text-decoration: none;
+            font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+            padding: 0 1.1rem; height: 68px; display: flex; align-items: center;
+            border-bottom: 3px solid transparent; margin-bottom: -3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav a:hover { color: var(--white); border-color: var(--accent); }
+        nav .nav-cta {
+            margin-left: 0.5rem; background: var(--accent); color: var(--navy);
+            border-radius: 4px; height: auto; padding: 0.5rem 1.1rem;
+            border-bottom: none; margin-bottom: 0; font-weight: 700;
+        }
+        nav .nav-cta:hover { background: #f5b233; border-color: transparent; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+        @media (max-width: 860px) {
+            nav { display: none; }
+            nav.open { display: flex; flex-direction: column; align-items: flex-start; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1rem 5%; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.open a { height: auto; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; }
+            nav.open .nav-cta { margin: 0.5rem 0 0; }
+            .hamburger { display: block; }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81EXF99189"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81EXF99189');
+    </script>
+</head>
+<body>
+<header>
+    <a href="../index.html" class="logo-wrap">
+        <img src="../logo.jpg" alt="Westcore Equipment">
+        <span class="logo-text">West<span>core</span> Equipment</span>
+    </a>
+        <nav id="main-nav">
+        <a href="../about.html">About</a>
+        <a href="../index.html#products">Products</a>
+        <a href="../index.html#why-vacuum">Why Vacuum</a>
+        <a href="../index.html#industries">Industries</a>
+        <a href="../articles/index.html">Articles</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../index.html#contact" class="nav-cta">Request a Quote</a>
+    </nav>
+</header>
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Articles</div>
+        <h1>Articles &amp; Resources</h1>
+    </div>
+</div>
+<main>
+    <div class="articles-grid">
+        <a href="what-is-vacuum-boiler.html" class="article-card">
+            <span class="article-tag">Education</span>
+            <h2>What Is a Vacuum Boiler System?</h2>
+            <p>A comprehensive guide to vacuum negative pressure boiler technology — how it works, why it's safer, and why factories are choosing it over traditional pressure boilers.</p>
+        </a>
+        <div class="article-card coming-soon">
+            <span class="article-tag">Energy</span>
+            <h2>How Food Factories Lower Energy Costs</h2>
+            <p>Practical strategies and real case studies showing how food processing operations have achieved significant energy savings with vacuum boiler technology.</p>
+            <span class="soon-label">Coming Soon</span>
+        </div>
+        <div class="article-card coming-soon">
+            <span class="article-tag">Technical</span>
+            <h2>Boiler Efficiency Calculation Methods</h2>
+            <p>A technical guide to accurately measuring and benchmarking boiler efficiency — including thermal efficiency, fuel utilization, and system losses.</p>
+            <span class="soon-label">Coming Soon</span>
+        </div>
+    </div>
+</main>
+<footer><p>&copy; 2026 Westcore Equipment. All rights reserved.</p></footer>
+<script>
+document.getElementById('hamburger').addEventListener('click', function(){
+    document.getElementById('main-nav').classList.toggle('open');
+});
+</script>
+</body>
+</html>

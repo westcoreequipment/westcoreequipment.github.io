@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Laundry — Westcore Equipment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        :root { --navy:#0d1b3e; --blue:#1a3a8f; --bright-blue:#1e56c8; --accent:#e8a020; --light:#f4f7fc; --mid:#dde4f0; --white:#ffffff; --text:#1a2035; --muted:#5a6685; --font-head:'Barlow Condensed',sans-serif; --font-body:'Barlow',sans-serif; }
+        body { font-family:var(--font-body); color:var(--text); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased; }
+        header { background:var(--navy); display:flex; align-items:center; justify-content:space-between; padding:0 5%; height:68px; border-bottom:3px solid var(--accent); position:sticky; top:0; z-index:100; }
+        .logo-wrap { display:flex; align-items:center; gap:12px; text-decoration:none; }
+        .logo-wrap img { height:40px; }
+        .logo-text { font-family:var(--font-head); font-size:1.4rem; font-weight:800; color:var(--white); letter-spacing:0.04em; text-transform:uppercase; }
+        .logo-text span { color:var(--accent); }
+        .page-hero { background:linear-gradient(135deg,var(--navy),#1a3a8f); padding:4rem 5%; }
+        .page-hero-inner { max-width:1100px; margin:0 auto; }
+        .breadcrumb { font-size:0.78rem; color:rgba(255,255,255,0.5); margin-bottom:1rem; }
+        .breadcrumb a { color:rgba(255,255,255,0.5); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--accent); }
+        .page-hero .icon { font-size:3rem; display:block; margin-bottom:1rem; }
+        .page-hero h1 { font-family:var(--font-head); font-size:3rem; font-weight:800; color:var(--white); text-transform:uppercase; }
+        .page-hero p { color:rgba(255,255,255,0.65); margin-top:0.75rem; max-width:600px; }
+        main { max-width:1100px; margin:0 auto; padding:4rem 5%; }
+        .content-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:start; }
+        h2 { font-family:var(--font-head); font-size:1.6rem; font-weight:700; color:var(--navy); text-transform:uppercase; margin-bottom:1rem; margin-top:2.5rem; }
+        h2:first-child { margin-top:0; }
+        p { color:var(--muted); line-height:1.85; margin-bottom:1rem; }
+        ul { color:var(--muted); padding-left:0; list-style:none; margin-bottom:1rem; }
+        ul li { padding-left:1.25rem; position:relative; line-height:1.85; }
+        ul li::before { content:'→'; color:var(--bright-blue); position:absolute; left:0; font-size:0.85rem; }
+        .roi-box { background:var(--light); border:1px solid var(--mid); border-radius:8px; padding:2rem; }
+        .roi-stat { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--mid); border-radius:6px; overflow:hidden; margin-bottom:1.25rem; }
+        .roi-val { background:var(--white); padding:1.25rem; text-align:center; }
+        .roi-val strong { display:block; font-family:var(--font-head); font-size:1.5rem; font-weight:800; color:var(--navy); }
+        .roi-val span { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-top:3px; display:block; }
+        .case-card { background:var(--navy); border-radius:8px; padding:1.75rem; margin-top:1.5rem; }
+        .case-label { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-bottom:0.75rem; display:block; }
+        .case-card p { color:rgba(255,255,255,0.75); margin:0; }
+        .cta-block { margin-top:2.5rem; display:flex; gap:0.75rem; flex-wrap:wrap; }
+        .btn { display:inline-flex; align-items:center; gap:8px; padding:0.75rem 1.6rem; border-radius:4px; font-family:var(--font-body); font-size:0.875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; cursor:pointer; text-decoration:none; transition:all 0.2s; border:2px solid transparent; }
+        .btn-primary { background:var(--accent); color:var(--navy); }
+        .btn-primary:hover { background:#f5b233; transform:translateY(-2px); }
+        .btn-outline { background:transparent; color:var(--navy); border-color:var(--mid); }
+        .btn-outline:hover { border-color:var(--navy); transform:translateY(-2px); }
+        .other-industries { background:var(--light); padding:3rem 5%; }
+        .other-industries-inner { max-width:1100px; margin:0 auto; }
+        .other-industries h2 { font-family:var(--font-head); font-size:1.4rem; font-weight:700; color:var(--navy); text-transform:uppercase; margin-bottom:1.25rem; margin-top:0; }
+        .ind-tags { display:flex; flex-wrap:wrap; gap:0.6rem; }
+        .ind-tag { padding:0.5rem 1.1rem; background:var(--white); border:1px solid var(--mid); border-radius:4px; font-size:0.85rem; font-weight:600; color:var(--blue); text-decoration:none; transition:all 0.2s; }
+        .ind-tag:hover { background:var(--navy); color:var(--white); border-color:var(--navy); }
+        footer { background:#07101f; padding:2rem 5%; text-align:center; }
+        footer p { color:#4a5578; font-size:0.8rem; }
+        @media(max-width:760px) { .content-grid{grid-template-columns:1fr;}
+        }
+            nav { display: flex; align-items: center; gap: 0; }
+        nav a {
+            color: rgba(255,255,255,0.78); text-decoration: none;
+            font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+            padding: 0 1.1rem; height: 68px; display: flex; align-items: center;
+            border-bottom: 3px solid transparent; margin-bottom: -3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav a:hover { color: var(--white); border-color: var(--accent); }
+        nav .nav-cta {
+            margin-left: 0.5rem; background: var(--accent); color: var(--navy);
+            border-radius: 4px; height: auto; padding: 0.5rem 1.1rem;
+            border-bottom: none; margin-bottom: 0; font-weight: 700;
+        }
+        nav .nav-cta:hover { background: #f5b233; border-color: transparent; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+        @media (max-width: 860px) {
+            nav { display: none; }
+            nav.open { display: flex; flex-direction: column; align-items: flex-start; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1rem 5%; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); }
+            nav.open a { height: auto; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; }
+            nav.open .nav-cta { margin: 0.5rem 0 0; }
+            .hamburger { display: block; }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81EXF99189"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81EXF99189');
+    </script>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo-wrap">
+        <img src="logo.jpg" alt="Westcore Equipment">
+        <span class="logo-text">West<span>core</span> Equipment</span>
+    </a>
+        <nav id="main-nav">
+        <a href="about.html">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#why-vacuum">Why Vacuum</a>
+        <a href="index.html#industries">Industries</a>
+        <a href="articles/index.html">Articles</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Request a Quote</a>
+    </nav>
+</header>
+
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#industries">Industries</a> / Commercial Laundry</div>
+        <span class="icon">🏨</span>
+        <h1>Commercial Laundry</h1>
+        <p>Vacuum negative pressure boiler solutions specifically engineered for the challenges of commercial laundry operations.</p>
+    </div>
+</div>
+
+<main>
+    <div class="content-grid">
+        <div>
+            <h2>Common Challenges</h2>
+            <ul>
+                <li>High steam demand during peak cycles requiring reliable output</li>
+                <li>Need for quick recovery, fast start-up, and maximum uptime</li>
+                <li>Cost pressure on utilities in a competitive market</li>
+            </ul>
+            <h2>How Vacuum Boilers Help</h2>
+            <p>Compact footprint, rapid start-up and high thermal efficiency mean laundries can meet peak demand while lowering fuel consumption and maintenance overhead. Our systems are designed for continuous duty cycles found in large hotel and industrial laundry operations.</p>
+            <div class="cta-block">
+                <a href="index.html#contact" class="btn btn-primary">Request a Quote →</a>
+                <a href="assets/product-brochure.pdf" class="btn btn-outline" download>⬇ Download Brochure</a>
+            </div>
+        </div>
+        <div>
+            <div class="roi-box">
+                <h2>Expected ROI</h2>
+                <div class="roi-stat">
+                    <div class="roi-val"><strong>12–24 months</strong><span>Typical Payback Period</span></div>
+                    <div class="roi-val"><strong>30% reduction in</strong><span>Energy Savings</span></div>
+                </div>
+                <p style="font-size:0.85rem;color:var(--muted);margin:0;">ROI varies depending on current energy costs, operating hours, and existing system age. Contact us for a customized savings estimate.</p>
+            </div>
+            <div class="case-card">
+                <span class="case-label">✦ Success Case</span>
+                <p>A large hotel laundry reduced daily gas consumption by 30% and cut overall operating cost by 18% within the first year of installation.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="other-industries">
+    <div class="other-industries-inner">
+        <h2>Other Industries We Serve</h2>
+        <div class="ind-tags">
+            <a href="food-processing.html" class="ind-tag">🍱 Food Processing</a>
+            <a href="beverage-manufacturing.html" class="ind-tag">🧃 Beverage Manufacturing</a>
+            <a href="commercial-laundry.html" class="ind-tag">🏨 Commercial Laundry</a>
+            <a href="central-kitchen.html" class="ind-tag">👨‍🍳 Central Kitchen</a>
+            <a href="industrial-manufacturing.html" class="ind-tag">🏭 Industrial Manufacturing</a>
+        </div>
+    </div>
+</div>
+
+<footer><p>&copy; 2026 Westcore Equipment. All rights reserved.</p></footer>
+<script>
+document.getElementById('hamburger').addEventListener('click', function(){
+    document.getElementById('main-nav').classList.toggle('open');
+});
+</script>
+</body>
+</html>

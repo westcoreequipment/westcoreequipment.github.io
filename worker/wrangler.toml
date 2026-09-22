@@ -1,0 +1,7 @@
+name = "westcore-form-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "RATE_KV"
+id = "871258fc03e14a03b6079827f48ee720"
