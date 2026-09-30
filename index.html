@@ -211,10 +211,14 @@
         .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; }
         .contact-info h2 { font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--navy); text-transform: uppercase; margin-bottom: 1rem; }
         .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+        .contact-group + .contact-group { margin-top: 2rem; }
+        .contact-group h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; }
         .contact-detail { display: flex; flex-direction: column; gap: 0.75rem; }
         .contact-row { display: flex; gap: 12px; align-items: flex-start; }
         .contact-row .icon { font-size: 1.1rem; margin-top: 2px; }
         .contact-row span { font-size: 0.9rem; color: var(--text); }
+        .contact-row a { color: var(--bright-blue); text-decoration: none; overflow-wrap: anywhere; }
+        .contact-row a:hover, .contact-row a:focus-visible { text-decoration: underline; }
         .contact-row strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
         .form-field { display: flex; flex-direction: column; gap: 4px; }
@@ -548,22 +552,38 @@
         <div class="contact-info">
             <h2>Contact Us</h2>
             <p>Fill out the form and our regional sales engineer will contact you within 1 business day.</p>
-            <div class="contact-detail">
-                <div class="contact-row">
-                    <span class="icon">📧</span>
-                    <div><strong>Email</strong><span>info@westcoreequipment.com</span></div>
+            <div class="contact-group">
+                <h3>Customers in Washington and Oregon</h3>
+                <div class="contact-detail">
+                    <div class="contact-row">
+                        <span class="icon">📍</span>
+                        <div><strong>Mailing Address</strong><span>PO Box 1035<br>Camas, WA 98607</span></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="icon">📞</span>
+                        <div><strong>Tom Fulepp</strong><span><a href="tel:+13609091625">360-909-1625</a></span></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="icon">📞</span>
+                        <div><strong>Meiya Fulepp</strong><span><a href="tel:+13609315667">360-931-5667</a></span></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="icon">📧</span>
+                        <div><strong>Email</strong><span><a href="mailto:melfulepp@gmail.com">melfulepp@gmail.com</a></span></div>
+                    </div>
                 </div>
-                <div class="contact-row">
-                    <span class="icon">📍</span>
-                    <div><strong>Sales Office</strong><span>Los Angeles, California</span></div>
-                </div>
-                <div class="contact-row">
-                    <span class="icon">🏭</span>
-                    <div><strong>Manufacturing</strong><span>Huzhou, Zhejiang, China</span></div>
-                </div>
-                <div class="contact-row">
-                    <span class="icon">🌐</span>
-                    <div><strong>Markets Served</strong><span>18 countries including United States</span></div>
+            </div>
+            <div class="contact-group">
+                <h3>All Other Customers</h3>
+                <div class="contact-detail">
+                    <div class="contact-row">
+                        <span class="icon">📧</span>
+                        <div><strong>Email</strong><span><a href="mailto:info@westcoreequipment.com">info@westcoreequipment.com</a></span></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="icon">📍</span>
+                        <div><strong>Sales Office</strong><span>Los Angeles, California</span></div>
+                    </div>
                 </div>
             </div>
         </div>
